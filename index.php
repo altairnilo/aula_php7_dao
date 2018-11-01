@@ -17,10 +17,19 @@ echo json_encode($usuarios);*/
 //echo json_encode($busca);
 
 // Carrega usuarios a partir de login e senha
-$busca=new Usuario();
+/*$busca=new Usuario();
 $login="Altair";
 $password="1a2b3c4d55ee";
 $busca->login($login,$password);
-echo $busca;
-//echo json_encode($search);
+echo $busca;*/
+$aluno = new Usuario("Alessandra","lele547076");
+
+//$aluno->setDeslogin("aluno");
+//$aluno->setDessenha("@alun0");
+// após o método construtor criado na classe usuario
+// não há necessidade das duas linhas acima.
+
+$aluno->insert();
+
+echo $aluno;
 ?>
