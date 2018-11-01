@@ -1,6 +1,26 @@
 <?php
 require_once("config.php");
-$sql=new Sql();
+/*$sql=new Sql();
 $usuarios = $sql->select("SELECT * FROM tb_usuarios");
-echo json_encode($usuarios);
+echo json_encode($usuarios);*/
+// carrega um usuario
+//$usuario=new Usuario();
+//$usuario->loadById(4);
+//echo $usuario;
+
+// Carrega uma lista de usuarios
+//$lista = Usuario::getList(); // não precisa instanciar.
+//echo json_encode($lista);
+
+// Carrega uma lsita de usuários buscando pelo login
+//$busca = Usuario::search("j");
+//echo json_encode($busca);
+
+// Carrega usuarios a partir de login e senha
+$busca=new Usuario();
+$login="Altair";
+$password="1a2b3c4d55ee";
+$busca->login($login,$password);
+echo $busca;
+//echo json_encode($search);
 ?>
